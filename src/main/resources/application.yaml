@@ -1,0 +1,36 @@
+# https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
+server:
+  servlet:
+    context-path: /template
+  port: 2000
+
+spring:
+  application:
+    name: template
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    hikari:
+      pool-name: SpringBootJPAHikariCP
+      connection-timeout: 5000
+      maximum-pool-size: 10
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false;MODE=ORACLE
+    username: SA
+    password:
+
+management:
+  server:
+    base-path: /admin
+    port: 9001
+  security:
+    enabled: false
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
