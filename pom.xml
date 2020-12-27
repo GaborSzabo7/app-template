@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>hu.gaszabo.template</groupId>
-	<artifactId>app-template</artifactId>
+	<artifactId>template</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
