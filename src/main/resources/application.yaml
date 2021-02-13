@@ -22,15 +22,19 @@ spring:
 
 management:
   server:
-    base-path: /admin
+    base-path: /actuator
     port: 9001
   security:
     enabled: false
+  metrics:
+    enable:
+      all: true
   endpoints:
     enabled-by-default: true
     web:
+      base-path: "/"
       exposure:
-        include: '*'
+        include: "*"
   endpoint:
     shutdown:
       enabled: true
