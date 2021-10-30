@@ -16,7 +16,13 @@ public class RestExceptionHandler {
 		return new ErrorMessage(getErrorMessages(ex));
 	}
 
-	private String getErrorMessages(Exception e) {
+	@ExceptionHandler(Throwable.class)
+	@ResponseStatus(value = INTERNAL_SERVER_ERROR)
+	public ErrorMessage resourceNotFoundException(Throwable ex, WebRequest request) {
+		return new ErrorMessage(getErrorMessages(ex));
+	}
+
+	private String getErrorMessages(Throwable e) {
 		if (e == null) {
 			return "";
 		}

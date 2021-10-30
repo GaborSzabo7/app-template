@@ -17,5 +17,13 @@
 	<logger name="hu.gaszabo.template" level="debug" additivity="false">
 		<appender-ref ref="Console" />
 	</logger>
+	
+	<logger name="org.springframework.security" level="warn" additivity="false">
+		<appender-ref ref="Console" />
+	</logger>
+	
+	<logger name="org.springframework.web" level="warn" additivity="false">
+		<appender-ref ref="Console" />
+	</logger>
 
 </configuration>

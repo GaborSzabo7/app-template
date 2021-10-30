@@ -29,3 +29,8 @@ hs_err_pid*
 
 # Maven target folder
 /target/
+
+# spring boot
+application-management.port
+application.pid
+application.port
